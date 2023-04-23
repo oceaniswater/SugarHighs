@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "welcome-pic-jpg-removebg.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
