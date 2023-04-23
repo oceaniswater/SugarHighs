@@ -8,12 +8,14 @@
 import UIKit
 
 protocol RouterMain {
-    var assembleyBuilder: AssembleyBuilderProtocol? {get set}
+    var moduleBuilder: ModuleBuilderProtocol? {get set}
+    var navigationController: UINavigationController? {get set}
 }
 
 protocol RouterProtocol: RouterMain {
 //    func initialViewController() -> UITabBarController?
-    func initialViewController() -> UIViewController?
+    func initialViewController()
+    func signInViewController()
 //    func showCharacters()
 //    func showCharacterDetails(character: Character?)
 //
@@ -23,19 +25,28 @@ protocol RouterProtocol: RouterMain {
 }
 
 class Router: RouterProtocol {
-    func initialViewController() -> UIViewController? {
-        guard let welcomeVC = self.assembleyBuilder?.createWelcomeModule(router: self) else { return nil }
-        return welcomeVC
+    
+    var navigationController: UINavigationController?
+    var moduleBuilder: ModuleBuilderProtocol?
+
+    
+    init(assembleyBuilder: ModuleBuilderProtocol, navigationController: UINavigationController) {
+        self.moduleBuilder = assembleyBuilder
+        self.navigationController = navigationController
     }
     
-//    var characterNC: UINavigationController?
-//    var locationNC: UINavigationController?
-//    var homeNC: UINavigationController?
-//
-    var assembleyBuilder: AssembleyBuilderProtocol?
-//
-    init(assembleyBuilder: AssembleyBuilderProtocol) {
-        self.assembleyBuilder = assembleyBuilder
+    func initialViewController() {
+        guard let navigationController = navigationController else { return }
+        guard let welcomeVC = self.moduleBuilder?.createWelcomeModule(router: self) else { return }
+        navigationController.viewControllers = [welcomeVC]
+        
+    }
+    
+    func signInViewController() {
+        guard let navigationController = navigationController else { return }
+        guard let signInVC = self.moduleBuilder?.createSignInModule(router: self) else { return }
+        navigationController.pushViewController(signInVC, animated: true)
+        
     }
     
     

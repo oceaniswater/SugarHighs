@@ -17,6 +17,8 @@
 		86870DC329F2E9D100B172E4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 86870DC229F2E9D100B172E4 /* SnapKit */; };
 		86BCE3C929F579CB00927C2D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BCE3C829F579CB00927C2D /* AppConstants.swift */; };
 		86BCE3CB29F57FF600927C2D /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BCE3CA29F57FF600927C2D /* WelcomePresenter.swift */; };
+		86DC002229F59A55007E1393 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC002129F59A55007E1393 /* SignInViewController.swift */; };
+		86DC002429F59E74007E1393 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC002329F59E74007E1393 /* SignInPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		86870DBF29F2E8D800B172E4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		86BCE3C829F579CB00927C2D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		86BCE3CA29F57FF600927C2D /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		86DC002129F59A55007E1393 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		86DC002329F59E74007E1393 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			children = (
 				86870DBB29F2E84F00B172E4 /* App */,
 				86870DBA29F2E7C000B172E4 /* WelcomeModule */,
+				86DC002029F59A28007E1393 /* SignInModule */,
 				86870DBC29F2E85F00B172E4 /* SupportingFiles */,
 				86870DB229F2E41B00B172E4 /* Info.plist */,
 			);
@@ -100,6 +105,15 @@
 				86870DAF29F2E41B00B172E4 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		86DC002029F59A28007E1393 /* SignInModule */ = {
+			isa = PBXGroup;
+			children = (
+				86DC002129F59A55007E1393 /* SignInViewController.swift */,
+				86DC002329F59E74007E1393 /* SignInPresenter.swift */,
+			);
+			path = SignInModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,7 +195,9 @@
 				86870DB929F2E7BA00B172E4 /* WelcomeViewController.swift in Sources */,
 				86BCE3C929F579CB00927C2D /* AppConstants.swift in Sources */,
 				86BCE3CB29F57FF600927C2D /* WelcomePresenter.swift in Sources */,
+				86DC002429F59E74007E1393 /* SignInPresenter.swift in Sources */,
 				86870DA529F2E41A00B172E4 /* AppDelegate.swift in Sources */,
+				86DC002229F59A55007E1393 /* SignInViewController.swift in Sources */,
 				86870DC029F2E8D800B172E4 /* Router.swift in Sources */,
 				86870DA729F2E41A00B172E4 /* SceneDelegate.swift in Sources */,
 				86870DBE29F2E89A00B172E4 /* ModuleBuilder.swift in Sources */,

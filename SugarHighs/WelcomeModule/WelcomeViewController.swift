@@ -22,7 +22,7 @@ class WelcomeViewController: UIViewController {
     let appNameLabel: UILabel = {
         let label = UILabel()
         label.text = "SugarHighs"
-        label.font = UIFont.systemFont(ofSize: 40.0)
+        label.font = UIFont.systemFont(ofSize: 30.0)
         return label
     }()
     

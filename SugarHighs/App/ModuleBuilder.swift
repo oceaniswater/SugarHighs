@@ -7,8 +7,9 @@
 
 import UIKit
 
-protocol AssembleyBuilderProtocol {
+protocol ModuleBuilderProtocol {
     func createWelcomeModule(router: RouterProtocol) -> UIViewController
+    func createSignInModule(router: RouterProtocol) -> UIViewController
 //    func createCharactersModule(router: RouterProtocol) -> UIViewController
 //    func createCharacterDetailModule(character: Character?, router: RouterProtocol) -> UIViewController
 //
@@ -18,7 +19,7 @@ protocol AssembleyBuilderProtocol {
 //    func createTabBarModule(router: RouterProtocol, viewControllers: [UIViewController]) -> UITabBarController
 }
 
-class AssembleyModuleBuilder: AssembleyBuilderProtocol {
+class ModuleBuilder: ModuleBuilderProtocol {
     
 //    func createTabBarModule(router: RouterProtocol, viewControllers: [UIViewController]) -> UITabBarController {
 //        let tabBar = MainTabBarController()
@@ -31,6 +32,13 @@ class AssembleyModuleBuilder: AssembleyBuilderProtocol {
     func createWelcomeModule(router: RouterProtocol) -> UIViewController {
         let view = WelcomeViewController()
         let presenter = WelcomePresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createSignInModule(router: RouterProtocol) -> UIViewController {
+        let view = SignInViewController()
+        let presenter = SignInPresenter(view: view, router: router)
         view.presenter = presenter
         return view
     }

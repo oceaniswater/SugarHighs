@@ -25,7 +25,7 @@ class WelcomePresenter: WelcomeViewPresenterProtocol {
     }
     
     func tapOnGetStarted() {
-        print("Get Started")
+        self.router?.signInViewController()
     }
 
 }
