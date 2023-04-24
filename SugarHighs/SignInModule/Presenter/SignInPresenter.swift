@@ -31,7 +31,7 @@ class SignInPresenter: SignInViewPresenterProtocol {
     }
     
     func tapOnSignIn(login: String, password: String) {
-        print("#tapOnSignIn -- login: \(login), password: \(password)")
+        router?.tabBarController()
     }
     
     func tapOnForgotPassword() {

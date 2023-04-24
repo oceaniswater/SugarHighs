@@ -10,6 +10,12 @@ import UIKit
 protocol ModuleBuilderProtocol {
     func createWelcomeModule(router: RouterProtocol) -> UIViewController
     func createSignInModule(router: RouterProtocol) -> UIViewController
+    func createHomeModule(router: RouterProtocol) -> UIViewController
+    func createShopsModule(router: RouterProtocol) -> UIViewController
+    func createCartModule(router: RouterProtocol) -> UIViewController
+    func createProfileModule(router: RouterProtocol) -> UIViewController
+    func createTabBarModule(router: RouterProtocol, viewControllers: [UIViewController], images: [String]) -> UITabBarController
+
 //    func createCharactersModule(router: RouterProtocol) -> UIViewController
 //    func createCharacterDetailModule(character: Character?, router: RouterProtocol) -> UIViewController
 //
@@ -20,15 +26,7 @@ protocol ModuleBuilderProtocol {
 }
 
 class ModuleBuilder: ModuleBuilderProtocol {
-    
-//    func createTabBarModule(router: RouterProtocol, viewControllers: [UIViewController]) -> UITabBarController {
-//        let tabBar = MainTabBarController()
-//        let presenter = TabBarPresenter(tabBar: tabBar, router: router, viewControllers: viewControllers)
-//        tabBar.presenter = presenter
-//        return tabBar
-//        
-//    }
-//
+
     func createWelcomeModule(router: RouterProtocol) -> UIViewController {
         let view = WelcomeViewController()
         let presenter = WelcomePresenter(view: view, router: router)
@@ -42,14 +40,42 @@ class ModuleBuilder: ModuleBuilderProtocol {
         view.presenter = presenter
         return view
     }
-//    
-//    func createCharactersModule(router: RouterProtocol) -> UIViewController {
-//        let view = CharactersViewController()
-//        let networkService = NetworkService()
-//        let presenter = CharactersPresenter(view: view, networkService: networkService, router: router)
-//        view.presenter = presenter
-//        return view
-//    }
+    
+    func createHomeModule(router: RouterProtocol) -> UIViewController {
+        let view = HomeViewController()
+        let presenter = HomePresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createShopsModule(router: RouterProtocol) -> UIViewController {
+        let view = ShopsViewController()
+        let presenter = ShopsPresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createCartModule(router: RouterProtocol) -> UIViewController {
+        let view = CartViewController()
+        let presenter = CartPresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createProfileModule(router: RouterProtocol) -> UIViewController {
+        let view = ProfileViewController()
+        let presenter = ProfilePresenter(view: view, router: router)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createTabBarModule(router: RouterProtocol, viewControllers: [UIViewController], images: [String]) -> UITabBarController {
+        let tabBar = TabBarViewController()
+        let presenter = TabBarPresenter(tabBar: tabBar, router: router, viewControllers: viewControllers, images: images)
+        tabBar.presenter = presenter
+        return tabBar
+        
+    }
 //    
 //    func createCharacterDetailModule(character: Character?, router: RouterProtocol) -> UIViewController {
 //        let view = CharacterDetailViewController()

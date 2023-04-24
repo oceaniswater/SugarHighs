@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		8636C1D229F686DD00222B5C /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1D129F686DD00222B5C /* AuthTextField.swift */; };
 		8636C1D629F6B3E300222B5C /* SignInViewCowntroller+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1D529F6B3E300222B5C /* SignInViewCowntroller+UITextFieldDelegate.swift */; };
+		8636C1DC29F6C05900222B5C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1DB29F6C05900222B5C /* HomeViewController.swift */; };
+		8636C1DE29F6C08100222B5C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1DD29F6C08100222B5C /* HomePresenter.swift */; };
+		8636C1E229F6D35E00222B5C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1E129F6D35E00222B5C /* TabBarViewController.swift */; };
+		8636C1E429F6D38B00222B5C /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1E329F6D38B00222B5C /* TabBarPresenter.swift */; };
+		8636C1E729F6DBBC00222B5C /* ShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1E629F6DBBC00222B5C /* ShopsViewController.swift */; };
+		8636C1EA29F6DC0400222B5C /* ShopsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1E929F6DC0400222B5C /* ShopsPresenter.swift */; };
+		8636C1ED29F6DDA600222B5C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1EC29F6DDA600222B5C /* CartViewController.swift */; };
+		8636C1F029F6DDF600222B5C /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1EF29F6DDF600222B5C /* CartPresenter.swift */; };
+		8636C1F329F6DE9D00222B5C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1F229F6DE9D00222B5C /* ProfileViewController.swift */; };
+		8636C1F529F6DEEC00222B5C /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1F429F6DEEC00222B5C /* ProfilePresenter.swift */; };
 		86870DA529F2E41A00B172E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86870DA429F2E41A00B172E4 /* AppDelegate.swift */; };
 		86870DA729F2E41A00B172E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86870DA629F2E41A00B172E4 /* SceneDelegate.swift */; };
 		86870DAE29F2E41B00B172E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86870DAD29F2E41B00B172E4 /* Assets.xcassets */; };
@@ -26,6 +36,16 @@
 /* Begin PBXFileReference section */
 		8636C1D129F686DD00222B5C /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		8636C1D529F6B3E300222B5C /* SignInViewCowntroller+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewCowntroller+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		8636C1DB29F6C05900222B5C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8636C1DD29F6C08100222B5C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		8636C1E129F6D35E00222B5C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8636C1E329F6D38B00222B5C /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		8636C1E629F6DBBC00222B5C /* ShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsViewController.swift; sourceTree = "<group>"; };
+		8636C1E929F6DC0400222B5C /* ShopsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsPresenter.swift; sourceTree = "<group>"; };
+		8636C1EC29F6DDA600222B5C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		8636C1EF29F6DDF600222B5C /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
+		8636C1F229F6DE9D00222B5C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8636C1F429F6DEEC00222B5C /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		86870DA129F2E41A00B172E4 /* SugarHighs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugarHighs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86870DA429F2E41A00B172E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86870DA629F2E41A00B172E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +89,91 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8636C1DA29F6C02A00222B5C /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1DF29F6C0F200222B5C /* Presenter */,
+				8636C1DB29F6C05900222B5C /* HomeViewController.swift */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		8636C1DF29F6C0F200222B5C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1DD29F6C08100222B5C /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8636C1E029F6D30800222B5C /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1F729F6E12900222B5C /* Presenter */,
+				8636C1E129F6D35E00222B5C /* TabBarViewController.swift */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
+		8636C1E529F6DB8D00222B5C /* ShopsModule */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1E829F6DBDF00222B5C /* Presenter */,
+				8636C1E629F6DBBC00222B5C /* ShopsViewController.swift */,
+			);
+			path = ShopsModule;
+			sourceTree = "<group>";
+		};
+		8636C1E829F6DBDF00222B5C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1E929F6DC0400222B5C /* ShopsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8636C1EB29F6DD6800222B5C /* CartModule */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1EE29F6DDDB00222B5C /* Presenter */,
+				8636C1EC29F6DDA600222B5C /* CartViewController.swift */,
+			);
+			path = CartModule;
+			sourceTree = "<group>";
+		};
+		8636C1EE29F6DDDB00222B5C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1EF29F6DDF600222B5C /* CartPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8636C1F129F6DE7C00222B5C /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1F629F6DEF000222B5C /* Presenter */,
+				8636C1F229F6DE9D00222B5C /* ProfileViewController.swift */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		8636C1F629F6DEF000222B5C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1F429F6DEEC00222B5C /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8636C1F729F6E12900222B5C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8636C1E329F6D38B00222B5C /* TabBarPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		86870D9829F2E41A00B172E4 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +196,11 @@
 				86870DBB29F2E84F00B172E4 /* App */,
 				86870DBA29F2E7C000B172E4 /* WelcomeModule */,
 				86DC002029F59A28007E1393 /* SignInModule */,
+				8636C1E029F6D30800222B5C /* TabBarModule */,
+				8636C1DA29F6C02A00222B5C /* HomeModule */,
+				8636C1E529F6DB8D00222B5C /* ShopsModule */,
+				8636C1EB29F6DD6800222B5C /* CartModule */,
+				8636C1F129F6DE7C00222B5C /* ProfileModule */,
 				86870DBC29F2E85F00B172E4 /* SupportingFiles */,
 				86870DB229F2E41B00B172E4 /* Info.plist */,
 			);
@@ -214,17 +324,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8636C1E729F6DBBC00222B5C /* ShopsViewController.swift in Sources */,
 				86870DB929F2E7BA00B172E4 /* WelcomeViewController.swift in Sources */,
+				8636C1F329F6DE9D00222B5C /* ProfileViewController.swift in Sources */,
 				8636C1D229F686DD00222B5C /* AuthTextField.swift in Sources */,
 				86BCE3C929F579CB00927C2D /* AppConstants.swift in Sources */,
 				86BCE3CB29F57FF600927C2D /* WelcomePresenter.swift in Sources */,
+				8636C1E229F6D35E00222B5C /* TabBarViewController.swift in Sources */,
+				8636C1E429F6D38B00222B5C /* TabBarPresenter.swift in Sources */,
 				86DC002429F59E74007E1393 /* SignInPresenter.swift in Sources */,
+				8636C1EA29F6DC0400222B5C /* ShopsPresenter.swift in Sources */,
 				86870DA529F2E41A00B172E4 /* AppDelegate.swift in Sources */,
 				86DC002229F59A55007E1393 /* SignInViewController.swift in Sources */,
 				8636C1D629F6B3E300222B5C /* SignInViewCowntroller+UITextFieldDelegate.swift in Sources */,
 				86870DC029F2E8D800B172E4 /* Router.swift in Sources */,
+				8636C1DE29F6C08100222B5C /* HomePresenter.swift in Sources */,
 				86870DA729F2E41A00B172E4 /* SceneDelegate.swift in Sources */,
 				86870DBE29F2E89A00B172E4 /* ModuleBuilder.swift in Sources */,
+				8636C1F529F6DEEC00222B5C /* ProfilePresenter.swift in Sources */,
+				8636C1ED29F6DDA600222B5C /* CartViewController.swift in Sources */,
+				8636C1F029F6DDF600222B5C /* CartPresenter.swift in Sources */,
+				8636C1DC29F6C05900222B5C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

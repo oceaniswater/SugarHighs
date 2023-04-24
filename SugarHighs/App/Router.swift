@@ -16,6 +16,8 @@ protocol RouterProtocol: RouterMain {
 //    func initialViewController() -> UITabBarController?
     func initialViewController()
     func signInViewController()
+    func homeViewController()
+    func tabBarController()
 //    func showCharacters()
 //    func showCharacterDetails(character: Character?)
 //
@@ -49,6 +51,12 @@ class Router: RouterProtocol {
         
     }
     
+    func homeViewController() {
+        guard let navigationController = navigationController else { return }
+        guard let homeVC = self.moduleBuilder?.createHomeModule(router: self) else { return }
+        navigationController.pushViewController(homeVC, animated: true)
+    }
+    
     
 //    func initialViewController() -> UITabBarController? {
 //            guard let mainViewController = self.assembleyBuilder?.createMainModule(router: self),
@@ -65,15 +73,19 @@ class Router: RouterProtocol {
 //    }
     
     // MARK: - Characters - Character Detail
-//    func showCharacters() {
-//        if let navigationController = navigationController {
-//            guard let charactersViewController = self.assembleyBuilder?.createCharactersModule(router: self) else {return}
-//            DispatchQueue.main.async {
-//                navigationController.pushViewController(charactersViewController, animated: true)
-//            }
-//
-//        }
-//    }
+    func tabBarController() {
+        if let navigationController = navigationController {
+            guard let homeViewController = self.moduleBuilder?.createHomeModule(router: self),
+                  let shopsViewController = self.moduleBuilder?.createShopsModule(router: self),
+                  let cartViewController = self.moduleBuilder?.createCartModule(router: self),
+                  let profileViewController = self.moduleBuilder?.createProfileModule(router: self),
+                  let tabBarController = self.moduleBuilder?.createTabBarModule(router: self, viewControllers: [homeViewController, shopsViewController, cartViewController, profileViewController], images: ["house", "building.2", "cart", "person.crop.circle.dashed"]) else {return}
+            DispatchQueue.main.async {
+                navigationController.pushViewController(tabBarController, animated: true)
+            }
+
+        }
+    }
     
 //    func showCharacterDetails(character: Character?) {
 //        if let characterNC = characterNC {

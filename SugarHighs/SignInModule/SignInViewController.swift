@@ -11,7 +11,7 @@ import SnapKit
 class SignInViewController: UIViewController {
     
     // MARK: - Presenter
-    var presenter: SignInPresenter!
+    var presenter: SignInViewPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
