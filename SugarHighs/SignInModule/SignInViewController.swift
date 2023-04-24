@@ -17,6 +17,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+        setupTextField()
         
     }
     
@@ -61,11 +62,13 @@ class SignInViewController: UIViewController {
     
     let loginTextField: AuthTextField = {
         let textField = AuthTextField(symbol: "envelope", placeholder: "email")
+        textField.tag = 0
         return textField
     }()
     
     let passwordTextField: AuthTextField = {
         let textField = AuthTextField(symbol: "lock", placeholder: "password")
+        textField.tag = 1
         textField.isSecureTextEntry = true
         return textField
     }()
@@ -79,7 +82,7 @@ class SignInViewController: UIViewController {
                                                     [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)])
         
         button.setAttributedTitle(attributedString, for: .normal)
-        //        button.addTarget(self, action: #selector(didTapGetStartedButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapForgotPasswordButton), for: .touchUpInside)
         return button
     }()
     
@@ -89,7 +92,7 @@ class SignInViewController: UIViewController {
         button.tintColor = .white
         button.backgroundColor = K.Design.buttonNormalBackgroundColor
         button.layer.cornerRadius = 25
-        //        button.addTarget(self, action: #selector(didTapGetStartedButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
         return button
     }()
     
@@ -111,7 +114,7 @@ class SignInViewController: UIViewController {
         button.titleLabel?.textAlignment = .center
         button.backgroundColor = K.Design.appBackgroundColor
         button.layer.cornerRadius = 25
-        //        button.addTarget(self, action: #selector(didTapGetStartedButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapAppleSignInButton), for: .touchUpInside)
         return button
     }()
     
@@ -124,7 +127,7 @@ class SignInViewController: UIViewController {
         button.titleLabel?.textAlignment = .center
         button.backgroundColor = K.Design.appBackgroundColor
         button.layer.cornerRadius = 25
-        //        button.addTarget(self, action: #selector(didTapGetStartedButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapFacebookSignInButton), for: .touchUpInside)
         return button
     }()
     
@@ -146,12 +149,35 @@ class SignInViewController: UIViewController {
                                                     [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)])
         
         button.setAttributedTitle(attributedString, for: .normal)
-        //        button.addTarget(self, action: #selector(didTapGetStartedButton), for: .touchUpInside)
+                button.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         return button
     }()
     
     var alternativeSigninHStack: UIStackView!
     var signUpHStack: UIStackView!
+    
+    
+    // MARK: - Buttons actions
+    @objc func didTapForgotPasswordButton() {
+        self.presenter.tapOnForgotPassword()
+    }
+    
+    @objc func didTapSignInButton() {
+        self.closeKeyboard()
+        self.presenter.tapOnSignIn(login: loginTextField.text!, password: passwordTextField.text!)
+    }
+    
+    @objc func didTapAppleSignInButton() {
+        self.presenter.tapOnAppleSignIn()
+    }
+    
+    @objc func didTapFacebookSignInButton() {
+        self.presenter.tapOnFacebookSignIn()
+    }
+    
+    @objc func didTapSignUpButton() {
+        self.presenter.tapOnSignUp()
+    }
 
     
 }
