@@ -62,32 +62,49 @@ private extension WelcomeViewController {
     func setupView() {
         view.backgroundColor = K.Design.appBackgroundColor
         
+        addSubview()
+        setupLayout()
+ 
+    }
+}
+
+// MARK: - Setting
+private extension WelcomeViewController {
+    func addSubview() {
         view.addSubview(appNameLabel)
+        view.addSubview(welcomePicImage)
+        view.addSubview(getStartedButton)
+        view.addSubview(descriptionLabel)
+    }
+}
+
+// MARK: - Setup Layout
+private extension WelcomeViewController {
+    func setupLayout() {
         appNameLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(10)
             make.centerX.equalToSuperview()
         }
         
-        view.addSubview(welcomePicImage)
+
         welcomePicImage.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.height.width.equalTo(350)
         }
         
-        view.addSubview(getStartedButton)
+
         getStartedButton.snp.makeConstraints { make in
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(10)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(52)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(10)
         }
         
-        view.addSubview(descriptionLabel)
+
         descriptionLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(getStartedButton.snp.bottom).inset(60)
+            make.bottom.equalTo(getStartedButton.snp.bottom).inset(80)
             make.trailing.leading.equalTo(view.safeAreaLayoutGuide).inset(10)
             make.centerX.equalToSuperview()
         }
-        
     }
 }
 

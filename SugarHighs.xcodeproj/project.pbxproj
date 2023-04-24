@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8636C1D229F686DD00222B5C /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8636C1D129F686DD00222B5C /* AuthTextField.swift */; };
+		8636C1D429F6A06200222B5C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8636C1D329F6A06200222B5C /* Storyboard.storyboard */; };
 		86870DA529F2E41A00B172E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86870DA429F2E41A00B172E4 /* AppDelegate.swift */; };
 		86870DA729F2E41A00B172E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86870DA629F2E41A00B172E4 /* SceneDelegate.swift */; };
 		86870DAE29F2E41B00B172E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86870DAD29F2E41B00B172E4 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8636C1D129F686DD00222B5C /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		8636C1D329F6A06200222B5C /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		86870DA129F2E41A00B172E4 /* SugarHighs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugarHighs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86870DA429F2E41A00B172E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86870DA629F2E41A00B172E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				86870DBD29F2E89A00B172E4 /* ModuleBuilder.swift */,
 				86870DBF29F2E8D800B172E4 /* Router.swift */,
 				86BCE3C829F579CB00927C2D /* AppConstants.swift */,
+				8636C1D329F6A06200222B5C /* Storyboard.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			children = (
 				86DC002129F59A55007E1393 /* SignInViewController.swift */,
 				86DC002329F59E74007E1393 /* SignInPresenter.swift */,
+				8636C1D129F686DD00222B5C /* AuthTextField.swift */,
 			);
 			path = SignInModule;
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 			files = (
 				86870DB129F2E41B00B172E4 /* LaunchScreen.storyboard in Resources */,
 				86870DAE29F2E41B00B172E4 /* Assets.xcassets in Resources */,
+				8636C1D429F6A06200222B5C /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86870DB929F2E7BA00B172E4 /* WelcomeViewController.swift in Sources */,
+				8636C1D229F686DD00222B5C /* AuthTextField.swift in Sources */,
 				86BCE3C929F579CB00927C2D /* AppConstants.swift in Sources */,
 				86BCE3CB29F57FF600927C2D /* WelcomePresenter.swift in Sources */,
 				86DC002429F59E74007E1393 /* SignInPresenter.swift in Sources */,
