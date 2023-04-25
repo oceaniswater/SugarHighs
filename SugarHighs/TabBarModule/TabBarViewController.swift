@@ -15,6 +15,9 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         setTabBarApperance()
+        
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.hidesBackButton = true
     }
     
 

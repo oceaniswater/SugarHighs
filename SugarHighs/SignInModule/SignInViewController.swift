@@ -16,6 +16,9 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.hidesBackButton = true
+        
         setupView()
         setupTextField()
         
@@ -235,7 +238,7 @@ private extension SignInViewController {
         
         titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide).inset(10)
+            make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(50)
         }
         
@@ -262,26 +265,26 @@ private extension SignInViewController {
         
         loginTextField.snp.makeConstraints { make in
             make.height.equalTo(50)
-            make.leading.trailing.equalToSuperview().inset(15)
+            make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalToSuperview().inset(10)
         }
         
         passwordTextField.snp.makeConstraints { make in
             make.height.equalTo(50)
-            make.leading.trailing.equalToSuperview().inset(15)
+            make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalTo(loginTextField.snp.bottom).offset(5)
         }
         
         forgotPasswordButton.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(15)
-            make.trailing.equalToSuperview().inset(15)
+            make.trailing.equalToSuperview().inset(20)
             make.height.equalTo(15)
         }
         
         signInButton.snp.makeConstraints { make in
             make.top.equalTo(forgotPasswordButton.snp.bottom).offset(30)
             make.centerX.equalToSuperview()
-            make.leading.trailing.equalToSuperview().inset(15)
+            make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(52)
         }
         
@@ -302,7 +305,7 @@ private extension SignInViewController {
         
         alternativeSigninHStack.snp.makeConstraints { make in
             make.top.equalTo(alternativeSignInLabel.snp.bottom).offset(20)
-            make.trailing.leading.equalToSuperview().inset(15)
+            make.trailing.leading.equalToSuperview().inset(20)
 
         }
         

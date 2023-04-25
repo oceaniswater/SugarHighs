@@ -96,7 +96,7 @@ private extension WelcomeViewController {
         getStartedButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
             make.height.equalTo(52)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(10)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
         
 
