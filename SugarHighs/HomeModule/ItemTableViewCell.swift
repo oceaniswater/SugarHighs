@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ItemTableViewCell: UITableViewCell {
     
@@ -36,6 +37,7 @@ class ItemTableViewCell: UITableViewCell {
     
     private let itemImage: UIImageView = {
         let image = UIImageView()
+        image.contentMode = .scaleToFill
         return image
     }()
     
@@ -67,6 +69,8 @@ class ItemTableViewCell: UITableViewCell {
     }()
     
     private var hStack: UIStackView!
+    private var tagsStack: UIStackView!
+    
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -74,6 +78,7 @@ class ItemTableViewCell: UITableViewCell {
         titleLabel.text = nil
         locationLabel.text = nil
         priceLabel.text = nil
+        tagsStack = UIStackView()
         
     }
     
@@ -91,6 +96,12 @@ class ItemTableViewCell: UITableViewCell {
         titleLabel.text = item.name.capitalizedSentence
         locationLabel.text = "\(item.shop.location)"
         priceLabel.text = "£ \(item.price)"
+        
+        for tag in item.tags {
+            let view = TagView()
+            view.configure(with: tag)
+            tagsStack.addArrangedSubview(view)
+        }
     }
 }
 
@@ -119,6 +130,15 @@ private extension ItemTableViewCell {
         
         view.addSubview(hStack)
         view.addSubview(priceLabel)
+        
+        tagsStack = UIStackView(arrangedSubviews: [])
+        tagsStack.axis = .horizontal
+        tagsStack.spacing = 3
+//        tagsStack.alignment = .center
+        tagsStack.distribution = .equalSpacing
+        
+        view.addSubview(tagsStack)
+        
     }
 }
 
@@ -128,11 +148,11 @@ private extension ItemTableViewCell {
         view.snp.makeConstraints { make in
             make.leading.trailing.equalTo(safeAreaLayoutGuide).inset(20)
             make.top.bottom.equalTo(safeAreaLayoutGuide).inset(8)
-            make.height.equalTo(100)
+            make.height.equalTo(120)
         }
         
         itemImage.snp.makeConstraints { make in
-            make.height.width.equalTo(79)
+            make.height.width.equalTo(90)
             make.top.bottom.leading.equalToSuperview().inset(15)
         }
         
@@ -140,6 +160,12 @@ private extension ItemTableViewCell {
             make.top.equalTo(itemImage.snp.top)
             make.leading.equalTo(itemImage.snp.trailing).offset(10)
         }
+        
+        tagsStack.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(5)
+            make.leading.equalTo(itemImage.snp.trailing).offset(10)
+        }
+        
         
         hStack.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(15)

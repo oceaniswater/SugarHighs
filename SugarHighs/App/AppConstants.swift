@@ -17,6 +17,17 @@ struct K {
         
         static let cellBackgroundColor = UIColor(named: "cellBackgroundColor")
         static let cellBoundColor = UIColor(named: "cellBoundColor")
+        
+        static let donutTagColor = UIColor(named: "donutTagColor")
+        static let donutTextTagColor = UIColor(named: "donutTextTagColor")
+        static let icecreamTagColor = UIColor(named: "icecreamTagColor")
+        static let icecreamTextTagColor = UIColor(named: "icecreamTextTagColor")
+        static let piesTagColor = UIColor(named: "piesTagColor")
+        static let piesTextTagColor = UIColor(named: "piesTextTagColor")
+        static let fruitsTagColor = UIColor(named: "fruitsTagColor")
+        static let fruitsTextTagColor = UIColor(named: "fruitsTextTagColor")
+        static let sweetsTagColor = UIColor(named: "sweetsTagColor")
+        static let sweetsTextTagColor = UIColor(named: "sweetsTagColor")
     }
     
     struct Network {

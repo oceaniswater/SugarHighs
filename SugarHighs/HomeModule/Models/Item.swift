@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum Tags {
-    case icecream
-    case donuts
-    case pies
-    case sweets
-    case fruits
+enum Tags: String {
+    case icecream = "Ice Cream"
+    case donuts = "Donuts"
+    case pies = "Pies"
+    case sweets = "Sweets"
+    case fruits = "Fruits"
 }
 
 struct Item {
