@@ -23,6 +23,3 @@ struct Item {
     let price: Double
 }
 
-struct Shop {
-    let location: String
-}

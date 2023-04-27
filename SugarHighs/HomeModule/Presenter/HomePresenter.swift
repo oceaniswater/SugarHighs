@@ -8,6 +8,7 @@
 import Foundation
 
 protocol HomeViewProtocol: AnyObject {
+    func success()
 }
 
 protocol HomeViewPresenterProtocol: AnyObject {
@@ -17,6 +18,8 @@ protocol HomeViewPresenterProtocol: AnyObject {
     func numberOfItemsInSection(in section: Int) -> Int
     func numberOfSections() -> Int
     func numberOfRows(in section: Int) -> Int
+    
+    func touchToItem(item: Item)
     
     var view: HomeViewProtocol? {get set}
     var router: RouterProtocol? {get set}
@@ -37,6 +40,10 @@ class HomePresenter: HomeViewPresenterProtocol {
         self.router = router
         generateCategories()
         generateItems()
+    }
+    
+    func touchToItem(item: Item) {
+        
     }
 
     
@@ -59,10 +66,16 @@ class HomePresenter: HomeViewPresenterProtocol {
     
     // MARK: - Mock methods
     func generateCategories() {
-        categories = MockData.shared.categories
+        DispatchQueue.global(qos: .utility).async {
+            self.categories = MockData.shared.categories
+            self.view?.success()
+        }
     }
     
     func generateItems() {
-        items = MockData.shared.items
+        DispatchQueue.global(qos: .utility).async {
+            self.items = MockData.shared.items
+            self.view?.success()
+        }
     }
 }

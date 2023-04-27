@@ -1,31 +1,32 @@
 //
-//  HomeVC+CollectionView.swift
+//  ShopsVC+CollectionView.swift
 //  SugarHighs
 //
-//  Created by Mark Golubev on 25/04/2023.
+//  Created by Mark Golubev on 27/04/2023.
 //
+
 import Foundation
 import UIKit
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ShopsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func reloadColectionView() {
         DispatchQueue.main.async {
-            self.categoriesCollection.reloadData()
+            self.shopsCollection.reloadData()
         }
 
     }
     
     func setupCollectionView() {
 
-        self.categoriesCollection.delegate = self
-        self.categoriesCollection.dataSource = self
+        self.shopsCollection.delegate = self
+        self.shopsCollection.dataSource = self
         
         registerCollectionCell()
     }
     
     func registerCollectionCell() {
-        self.categoriesCollection.register(CategoryCollectionCell.self, forCellWithReuseIdentifier: CategoryCollectionCell.identifier)
+        self.shopsCollection.register(ShopCollectionCell.self, forCellWithReuseIdentifier: ShopCollectionCell.identifier)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -38,9 +39,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionCell.identifier, for: indexPath) as! CategoryCollectionCell
-        if let category = presenter.categories?[indexPath.row] {
-            cell.configure(with: category)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopCollectionCell.identifier, for: indexPath) as! ShopCollectionCell
+        if let shop = presenter.shops[indexPath.row] {
+            cell.configure(with: shop)
         }
         return cell
     }
@@ -54,16 +55,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
 }
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
+extension ShopsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 200)
+        return CGSize(width: 160, height: 230)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return 10
     }
+
 }
+

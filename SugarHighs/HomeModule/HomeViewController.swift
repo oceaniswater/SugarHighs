@@ -122,5 +122,10 @@ private extension HomeViewController {
 }
 
 extension HomeViewController: HomeViewProtocol {
+    func success() {
+        reloadTableView()
+        reloadColectionView()
+    }
+    
     
 }

@@ -61,17 +61,6 @@ class CategoryCollectionCell: UICollectionViewCell {
     }
 }
 
-// MARK: - Private methods
-//private extension CategoryCollectionCell {
-//    func setupCell() {
-//        contentView.addSubview(categoryImageView)
-//        categoryImageView.snp.makeConstraints { maker in
-//            maker.edges.equalToSuperview()
-//        }
-//        contentView.backgroundColor = .clear
-//    }
-//}
-
 // MARK: - Setup View
 private extension CategoryCollectionCell {
     func setupCell() {
