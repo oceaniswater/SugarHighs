@@ -18,6 +18,7 @@ protocol RouterProtocol: RouterMain {
     func signInViewController()
     func homeViewController()
     func tabBarController()
+    func shopViewController(shop: Shop?)
 //    func showCharacters()
 //    func showCharacterDetails(character: Character?)
 //
@@ -55,6 +56,12 @@ class Router: RouterProtocol {
         guard let navigationController = navigationController else { return }
         guard let homeVC = self.moduleBuilder?.createHomeModule(router: self) else { return }
         navigationController.pushViewController(homeVC, animated: true)
+    }
+    
+    func shopViewController(shop: Shop?) {
+        guard let navigationController = navigationController else { return }
+        guard let shopVC = self.moduleBuilder?.createShopModule(shop: shop, router: self) else { return }
+        navigationController.pushViewController(shopVC, animated: true)
     }
     
     

@@ -46,11 +46,11 @@ extension ShopsViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if let resident = presenter.residents[indexPath.row] {
-//            presenter.tapOnTheCharacter(character: resident)
-//        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let shop = presenter.shops[indexPath.row] {
+            presenter.tapToShop(shop: shop)
+        }
+    }
     
     
 }

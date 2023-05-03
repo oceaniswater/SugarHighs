@@ -17,7 +17,7 @@ protocol ModuleBuilderProtocol {
     func createTabBarModule(router: RouterProtocol, viewControllers: [UIViewController], images: [String]) -> UITabBarController
 
 //    func createCharactersModule(router: RouterProtocol) -> UIViewController
-//    func createCharacterDetailModule(character: Character?, router: RouterProtocol) -> UIViewController
+    func createShopModule(shop: Shop?, router: RouterProtocol) -> UIViewController
 //
 //    func createLocationsModule(router: RouterProtocol) -> UIViewController
 //    func createLocationDetailModule(location: LocationResult?, router: RouterProtocol) -> UIViewController
@@ -26,7 +26,7 @@ protocol ModuleBuilderProtocol {
 }
 
 class ModuleBuilder: ModuleBuilderProtocol {
-
+    
     func createWelcomeModule(router: RouterProtocol) -> UIViewController {
         let view = WelcomeViewController()
         let presenter = WelcomePresenter(view: view, router: router)
@@ -75,6 +75,13 @@ class ModuleBuilder: ModuleBuilderProtocol {
         tabBar.presenter = presenter
         return tabBar
         
+    }
+    
+    func createShopModule(shop: Shop?, router: RouterProtocol) -> UIViewController {
+        let view = ShopViewController()
+        let presenter = ShopPresenter(view: view, router: router, shop: shop)
+        view.presenter = presenter
+        return view
     }
 //    
 //    func createCharacterDetailModule(character: Character?, router: RouterProtocol) -> UIViewController {

@@ -62,7 +62,7 @@ class ShopsPresenter: ShopsViewPresenterProtocol {
     }
     
     func tapToShop(shop: Shop) {
-//        
+        router?.shopViewController(shop: shop)
     }
 
 }

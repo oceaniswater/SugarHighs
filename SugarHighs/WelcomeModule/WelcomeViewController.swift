@@ -10,7 +10,7 @@ import SnapKit
 
 class WelcomeViewController: UIViewController {
     
-    var presenter: WelcomePresenter!
+    var presenter: WelcomeViewPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
