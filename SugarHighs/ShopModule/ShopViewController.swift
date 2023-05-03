@@ -60,6 +60,14 @@ class ShopViewController: UIViewController {
         let button = SeeRewardsButton()
         return button
     }()
+    
+    let tagsItemCollection: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.backgroundColor = .clear
+        return collection
+    }()
 }
 
 // MARK: - Setup View
