@@ -19,11 +19,6 @@ class TagView: UIView {
         return label
     }()
     
-    private let  view: UIView = {
-       let view = UIView()
-        return view
-    }()
-    
     
     func configure(with tags: Tags) {
         switch tags {

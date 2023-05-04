@@ -17,6 +17,7 @@ class ShopViewController: UIViewController {
         
         self.presenter.setShop()
         setupView()
+        setupCollectionView()
         
         
         //        self.navigationItem.leftBarButtonItem = nil
@@ -91,6 +92,7 @@ private extension ShopViewController {
         view.addSubview(shopNameLabel)
         view.addSubview(shopLocationLabel)
         view.addSubview(rewardsButton)
+        view.addSubview(tagsItemCollection)
     }
 }
 
@@ -122,9 +124,17 @@ private extension ShopViewController {
             make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalTo(shopLocationLabel.snp.bottom).offset(10)
         }
+        
+        tagsItemCollection.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(20)
+            make.trailing.equalToSuperview()
+            make.top.equalTo(rewardsButton.snp.bottom).offset(20)
+            make.height.equalTo(40)
+        }
     }
 }
 
+// MARK: - ShopViewProtocol
 extension ShopViewController: ShopViewProtocol {
     func setShop(shop: Shop) {
         shopNameLabel.text = shop.name
