@@ -18,6 +18,7 @@ protocol ModuleBuilderProtocol {
 
 //    func createCharactersModule(router: RouterProtocol) -> UIViewController
     func createShopModule(shop: Shop?, router: RouterProtocol) -> UIViewController
+    func createMapModule(shop: Shop?, router: RouterProtocol) -> UIViewController
 //
 //    func createLocationsModule(router: RouterProtocol) -> UIViewController
 //    func createLocationDetailModule(location: LocationResult?, router: RouterProtocol) -> UIViewController
@@ -80,6 +81,13 @@ class ModuleBuilder: ModuleBuilderProtocol {
     func createShopModule(shop: Shop?, router: RouterProtocol) -> UIViewController {
         let view = ShopViewController()
         let presenter = ShopPresenter(view: view, router: router, shop: shop)
+        view.presenter = presenter
+        return view
+    }
+    
+    func createMapModule(shop: Shop?, router: RouterProtocol) -> UIViewController {
+        let view = MapViewController()
+        let presenter = MapPresenter(view: view, router: router, shop: shop)
         view.presenter = presenter
         return view
     }

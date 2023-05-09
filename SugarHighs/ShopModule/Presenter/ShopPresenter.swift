@@ -18,6 +18,8 @@ protocol ShopViewPresenterProtocol: AnyObject {
     func setShop()
     func getTags()
     
+    func tapToLocationButton()
+    
     func numberOfSection() -> Int
     func numberOfItemsInSection(in section: Int) -> Int
     
@@ -48,6 +50,10 @@ class ShopPresenter: ShopViewPresenterProtocol {
         self.router = router
         self.shop = shop
         
+    }
+    
+    func tapToLocationButton() {
+        router?.mapViewController(shop: self.shop)
     }
     
     func numberOfSection() -> Int {

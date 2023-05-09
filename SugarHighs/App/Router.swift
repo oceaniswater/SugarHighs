@@ -19,6 +19,7 @@ protocol RouterProtocol: RouterMain {
     func homeViewController()
     func tabBarController()
     func shopViewController(shop: Shop?)
+    func mapViewController(shop: Shop?)
 //    func showCharacters()
 //    func showCharacterDetails(character: Character?)
 //
@@ -62,6 +63,12 @@ class Router: RouterProtocol {
         guard let navigationController = navigationController else { return }
         guard let shopVC = self.moduleBuilder?.createShopModule(shop: shop, router: self) else { return }
         navigationController.pushViewController(shopVC, animated: true)
+    }
+    
+    func mapViewController(shop: Shop?) {
+        guard let navigationController = navigationController else { return }
+        guard let mapVC = self.moduleBuilder?.createMapModule(shop: shop, router: self) else { return }
+        navigationController.pushViewController(mapVC, animated: true)
     }
     
     

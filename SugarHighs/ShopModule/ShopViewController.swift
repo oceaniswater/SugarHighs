@@ -35,8 +35,9 @@ class ShopViewController: UIViewController {
         return image
     }()
     
-    private let locationButton: ShopLocationButton = {
+    lazy var locationButton: ShopLocationButton = {
         let button = ShopLocationButton()
+        button.addTarget(self, action: #selector(didTapLocationButton), for: .touchUpInside)
         return button
     }()
     
@@ -77,6 +78,11 @@ class ShopViewController: UIViewController {
         table.separatorStyle = .none
         return table
     }()
+    
+    // MARK: - Private func
+    @objc func didTapLocationButton() {
+        self.presenter.tapToLocationButton()
+    }
 }
 
 // MARK: - Setup View
@@ -96,7 +102,7 @@ private extension ShopViewController {
 private extension ShopViewController {
     func addSubview() {
         view.addSubview(shopImage)
-        shopImage.addSubview(locationButton)
+        view.addSubview(locationButton)
         view.addSubview(shopNameLabel)
         view.addSubview(shopLocationLabel)
         view.addSubview(rewardsButton)
@@ -115,8 +121,8 @@ private extension ShopViewController {
         }
         
         locationButton.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(20)
-            make.trailing.leading.equalToSuperview().inset(20)
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(20)
+            make.trailing.leading.equalToSuperview().inset(40)
         }
         
         shopNameLabel.snp.makeConstraints { make in
