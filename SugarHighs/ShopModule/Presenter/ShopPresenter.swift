@@ -20,6 +20,9 @@ protocol ShopViewPresenterProtocol: AnyObject {
     
     func numberOfSection() -> Int
     func numberOfItemsInSection(in section: Int) -> Int
+    
+    func numberOfSections() -> Int
+    func numberOfRows(in section: Int) -> Int
 //
 //    func getShops()
 //    func tapToShop(shop: Shop)
@@ -27,6 +30,7 @@ protocol ShopViewPresenterProtocol: AnyObject {
     
     var shop: Shop? {get set}
     var tags: [Tags?]? {get set}
+    var items: [Item?]? {get set}
     
     
 }
@@ -37,6 +41,7 @@ class ShopPresenter: ShopViewPresenterProtocol {
     
     var shop: Shop?
     var tags: [Tags?]?
+    var items: [Item?]?
     
     required init(view: ShopViewProtocol, router: RouterProtocol, shop: Shop?) {
         self.view = view
@@ -51,11 +56,19 @@ class ShopPresenter: ShopViewPresenterProtocol {
     func numberOfItemsInSection(in section: Int) -> Int {
         return tags?.count ?? 0
     }
+    func numberOfSections() -> Int {
+        1
+    }
+    
+    func numberOfRows(in section: Int) -> Int {
+        return self.items?.count ?? 0
+    }
     
     func setShop() {
         guard let shop = shop else { return }
         view?.setShop(shop: shop)
         getTags()
+        getItems()
     }
     
     func getTags() {
@@ -67,5 +80,9 @@ class ShopPresenter: ShopViewPresenterProtocol {
             }
         }
         tags = Array(temp)
+    }
+    
+    func getItems() {
+        items = shop?.items
     }
 }

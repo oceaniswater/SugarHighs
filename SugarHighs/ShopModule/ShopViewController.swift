@@ -18,6 +18,7 @@ class ShopViewController: UIViewController {
         self.presenter.setShop()
         setupView()
         setupCollectionView()
+        setupTableView()
         
         
         //        self.navigationItem.leftBarButtonItem = nil
@@ -69,6 +70,13 @@ class ShopViewController: UIViewController {
         collection.backgroundColor = .clear
         return collection
     }()
+    
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.backgroundColor = .clear
+        table.separatorStyle = .none
+        return table
+    }()
 }
 
 // MARK: - Setup View
@@ -93,6 +101,7 @@ private extension ShopViewController {
         view.addSubview(shopLocationLabel)
         view.addSubview(rewardsButton)
         view.addSubview(tagsItemCollection)
+        view.addSubview(tableView)
     }
 }
 
@@ -131,6 +140,14 @@ private extension ShopViewController {
             make.top.equalTo(rewardsButton.snp.bottom).offset(20)
             make.height.equalTo(40)
         }
+        
+        tableView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(tagsItemCollection.snp.bottom).offset(10)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        
     }
 }
 

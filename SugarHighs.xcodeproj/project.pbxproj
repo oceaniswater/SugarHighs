@@ -50,6 +50,7 @@
 		869FD7552A02D33B000C990B /* SeeRewardsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869FD7542A02D33B000C990B /* SeeRewardsButton.swift */; };
 		86BCE3C929F579CB00927C2D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BCE3C829F579CB00927C2D /* AppConstants.swift */; };
 		86BCE3CB29F57FF600927C2D /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BCE3CA29F57FF600927C2D /* WelcomePresenter.swift */; };
+		86C55FAF2A0A768B00F9BBE0 /* ShopVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C55FAE2A0A768B00F9BBE0 /* ShopVC+TableView.swift */; };
 		86DC002229F59A55007E1393 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC002129F59A55007E1393 /* SignInViewController.swift */; };
 		86DC002429F59E74007E1393 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC002329F59E74007E1393 /* SignInPresenter.swift */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,7 @@
 		869FD7542A02D33B000C990B /* SeeRewardsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeRewardsButton.swift; sourceTree = "<group>"; };
 		86BCE3C829F579CB00927C2D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		86BCE3CA29F57FF600927C2D /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		86C55FAE2A0A768B00F9BBE0 /* ShopVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopVC+TableView.swift"; sourceTree = "<group>"; };
 		86DC002129F59A55007E1393 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		86DC002329F59E74007E1393 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				869FD7542A02D33B000C990B /* SeeRewardsButton.swift */,
 				86612E822A03BE59006D867A /* ShopVC+CollectionView.swift */,
 				86612E842A03BFCE006D867A /* TagCollectionCell.swift */,
+				86C55FAE2A0A768B00F9BBE0 /* ShopVC+TableView.swift */,
 			);
 			path = ShopModule;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				8636C1F529F6DEEC00222B5C /* ProfilePresenter.swift in Sources */,
 				8636C1ED29F6DDA600222B5C /* CartViewController.swift in Sources */,
 				860F89B529FAB3A500CA9950 /* ShopCollectionCell.swift in Sources */,
+				86C55FAF2A0A768B00F9BBE0 /* ShopVC+TableView.swift in Sources */,
 				8636C1F029F6DDF600222B5C /* CartPresenter.swift in Sources */,
 				860F89BF29FADB1400CA9950 /* ShopPresenter.swift in Sources */,
 				86612E832A03BE59006D867A /* ShopVC+CollectionView.swift in Sources */,
